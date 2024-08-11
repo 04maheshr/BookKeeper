@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  section {
+    background-color: white;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 0.5em 0 0.2em;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  button {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 0.5em;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Table styles */
+  #book-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+  
+  #book-details-table th,
+  #book-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #book-details-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  /* Additional spacing */
+  section + section {
+    margin-top: 2em;
+  }
+  

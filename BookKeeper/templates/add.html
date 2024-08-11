@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}"/>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Library</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="{{url_for('add')}}">Add a New book</a></li>
+          <li><a href="{{url_for('edit_page')}}">Edit Books</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="insert-section">
+        <h2>Add a New Book</h2>
+        <form id="insert-form"  action ="/values", onsubmit="addBook(event)",method="post">
+
+          <label for="pathivu-en">Pathivu En:</label>
+          <input type="text" id="pathivu-en" name="pathivu_en" required />
+
+          <label for="pagupu-en">MNNo:</label>
+          <input type="text" id="pagupu-en" name="pagupu_en" required />
+
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            lang="ta"
+            dir="auto"
+          />
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required />
+
+          <label for="rate">Rate:</label>
+          <input type="number" step="0.1" id="rate" name="rate" required />
+
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" required />
+
+          <label for="rack-no">Rack No:</label>
+          <input type="number" id="rack-no" name="rack_no" required />
+
+          <label>Rack Side:</label>
+          <div>
+            <input
+              type="radio"
+              id="rack-left"
+              name="rack_side"
+              value="Left"
+              required
+            />
+            <label for="rack-left">Left</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="rack-right"
+              name="rack_side"
+              value="Right"
+              required
+            />
+            <label for="rack-right">Right</label>
+          </div>
+
+          <label for="row-no">Row No:</label>
+          <input type="number" id="row-no" name="row_no" required />
+
+          <button type="submit">Insert</button>
+        </form>
+      </section>
+    </main>
+    <script src="{{url_for('static', filename='JAVASCRIPT/script1.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Library</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="{{url_for('add')}}">Add a New book</a></li>
+          <li><a href="{{url_for('edit_page')}}">Edit Books</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="update-section">
+        <h2>Update Book Rack Info</h2>
+        <form id="update-form">
+          <label for="update-reg-no">Reg No:</label>
+          <input type="text" id="update-reg-no" name="reg_no" required />
+
+          <label for="update-rack-no">Rack No:</label>
+          <input type="number" id="update-rack-no" name="rack_no" required />
+
+          <label>Rack Side:</label>
+          <div>
+            <input
+              type="radio"
+              id="update-rack-left"
+              name="rack_side"
+              value="Left"
+              required
+            />
+            <label for="update-rack-left">Left</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="update-rack-right"
+              name="rack_side"
+              value="Right"
+              required
+            />
+            <label for="update-rack-right">Right</label>
+          </div>
+
+          <label for="update-row-no">Row No:</label>
+          <input type="number" id="update-row-no" name="row_no" required />
+
+          <button type="submit">Update</button>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Library</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="{{url_for('add')}}">Add a New book</a></li>
+          <li><a href="{{url_for('edit_page')}}">Edit Books</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="search-section">
+        <h2>Search for a Book</h2>
+        <input type="text" id="search-input" placeholder="Enter Book Reg No" />
+        <button id="search-button" onclick="search_button(event)">Search</button>
+      </section>
+      <section id="book-details">
+        <h2>Book Details</h2>
+        <table id="book-details-table">
+          <thead>
+            <tr>
+              <th>SNo</th>
+              <th>Rack No</th>
+              <th>Rack Side</th>
+              <th>Row No</th>
+              <th>MNNo</th>
+              <th>Pathivu En</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+              <th>Rate</th>
+              
+            </tr>
+          </thead>
+          <tbody id="book-details-table-values">
+            <!-- Book details will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="{{url_for('static', filename='JAVASCRIPT/script2.js') }}"></script>
+  </body>
+</html>
