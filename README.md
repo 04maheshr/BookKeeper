@@ -1,4 +1,5 @@
-install and my sql connector and the  add the below details in my sql mydb = mysql.connector.connect(
+install my sql  using youtbe  and the  add the below details in my sql 
+mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         password="root",
